@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>信息排列效果</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			font-family: "Micosoft Yahei";
+			font-size: 14px;
+		}
+		ul{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		#box{
+			width: 540px;
+			margin: 0 auto;
+			border: 1px solid #aaa;
+			overflow: hidden;
+		}
+		#top{
+			height: 40px;
+		}
+		#top a{
+			display: block;
+			height: 16px;
+			width: 16px;
+			float: right;
+			margin: 5px;
+		}
+		.list-off{
+			background: url("list-off.png") no-repeat -1px -1px;
+			background-size: 18px 18px;
+		} 
+		.card-on{
+			background: url('card-on.png') no-repeat -2px -2px;
+			background-size: 20px 20px;
+		}
+		.list-on{
+			background: url("list-on.png") no-repeat -1px -1px;
+			background-size: 18px 18px;
+		} 
+		.card-off{
+			background: url('card-off.png') no-repeat -2px -2px;
+			background-size: 20px 20px;
+		}
+		#box ul li{
+			width: 160px;
+			border: 1px solid #aaa;
+			float: left;
+			margin: 8px;
+		}
+		.a-img{
+			display: block;
+			width: 160px;
+			height: 170px;
+			overflow: hidden;
+		}
+		p a,p span{
+			display: block;
+			line-height: 20px;
+			padding-left: 10px;
+		}
+		.bottom{
+			height: 35px;
+			line-height: 35px;
+			text-align: center;
+			background-color: #ccc;
+		}
+		.small{
+			width: 50px;
+			height: 50px;
+			margin: 5px;
+			float: left;
+		}
+	</style>
+	<script>
+		window.onload=function(){
+			var listBtn=document.getElementById("btn1");
+			var cardBtn=document.getElementById("btn2");
+			var img=document.getElementsByTagName("img");
+			listBtn.onclick=function(){
+				listBtn.className="list-on";
+				cardBtn.className="card-off";
+				for(var i=0;i<img.length;i++){
+					img[i].src="W1.jpg";
+					img[i].parentNode.className="a-img small";
+				}
+			};
+			cardBtn.onclick=function(){
+				listBtn.className="list-off";
+				cardBtn.className="card-on";
+				for(var i=0;i<img.length;i++){
+					img[i].src="W0.jpg";
+					img[i].parentNode.className="a-img";
+				}
+			};
+		};
+	</script>
+</head>
+<body>
+	<div id="box">
+		<div id="top">
+		<a href="#" class="list-off" id="btn1"></a>
+		<a href="#" class="card-on" id="btn2"></a>
+		</div>
+		<ul>
+			<li>
+				<div class="con">
+					<a href="#" class="a-img">
+						<img src="W0.jpg">
+					</a>
+					<p>
+						<a href="#">天星</a>
+						<span>浙江</span>
+						<span>21个共同好友</span>
+					</p>	
+				</div>
+				<div class="bottom">
+					未分组的好友
+				</div>
+			</li>
+			<li>
+				<div class="con">
+					<a href="#" class="a-img">
+						<img src="W0.jpg">
+					</a>
+					<p>
+						<a href="#">天星</a>
+						<span>浙江</span>
+						<span>21个共同好友</span>
+					</p>	
+				</div>
+				<div class="bottom">
+					未分组的好友
+				</div>
+			</li>
+			<li>
+				<div class="con">
+					<a href="#" class="a-img">
+						<img src="W0.jpg">
+					</a>
+					<p>
+						<a href="#">天星</a>
+						<span>浙江</span>
+						<span>21个共同好友</span>
+					</p>	
+				</div>
+				<div class="bottom">
+					未分组的好友
+				</div>
+			</li>
+			<li>
+				<div class="con">
+					<a href="#" class="a-img">
+						<img src="W0.jpg">
+					</a>
+					<p>
+						<a href="#">天星</a>
+						<span>浙江</span>
+						<span>21个共同好友</span>
+					</p>	
+				</div>
+				<div class="bottom">
+					未分组的好友
+				</div>
+			</li>
+			<li>
+				<div class="con">
+					<a href="#" class="a-img">
+						<img src="W0.jpg">
+					</a>
+					<p>
+						<a href="#">天星</a>
+						<span>浙江</span>
+						<span>21个共同好友</span>
+					</p>	
+				</div>
+				<div class="bottom">
+					未分组的好友
+				</div>
+			</li>
+			<li>
+				<div class="con">
+					<a href="#" class="a-img">
+						<img src="W0.jpg">
+					</a>
+					<p>
+						<a href="#">天星</a>
+						<span>浙江</span>
+						<span>21个共同好友</span>
+					</p>	
+				</div>
+				<div class="bottom">
+					未分组的好友
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
